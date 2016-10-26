@@ -1,34 +1,33 @@
 #include <cstdio>
-long long int a,b,c,n,half_n,third_n;
-long long int cnt;
+#include <cstdlib>
+#include <ctime>
 
+
+#define MAX 50
+long long int j=1;
+long long int a[100000] = {};
+long long int i;
+
+long long int n;
 int main()
 {
-    scanf("%lld", &n);
-    half_n = n/2;
-    third_n = n/3;
-    if( n<= 2)
-        printf("%d", 0);
-    else {
-        if(n%2 == 0){
-            cnt = 0;
-            for (a = 2; a*2<=half_n ; a++) {
-                cnt += (a/2);
-            }
-        }
-        else {
-            cnt = 1;
-            for (a = 2; a*2<=half_n ; a++) {
-                if(a%2==0)
-                    cnt += (a/2);
-                else
-                    cnt += (a/2)+1;
-            }
-            
-        }
-        for(; a<=third_n; a++){
-            cnt += (n-a)/2 -a+1;
-        }
-        printf("%lld", cnt);
+    
+    srand((int)time(NULL));
+    
+ 
+    for (i=0; i < 500; i++) {
+        printf("%lld ", rand()%1000);
     }
+
+    /*printf("DONE");
+    scanf("%lld", &n);
+    printf("YEAH");
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%lld", &a[i]);
+        printf("currently printed %lld\n",a[i]);
+    }
+    for(i=0;i<n;i++)
+        printf("%lld : %lld\n", i, a[i]);*/
 }
