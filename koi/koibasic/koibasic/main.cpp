@@ -1,5 +1,44 @@
-// 수열 속 보물 찾기 - 큰버전
+// 재귀 - 각 자리 수의 합 리턴
+#include <stdio.h>
 
+long long int i, sum;
+
+long long int f(long long int k, long long int j){
+    if(j>k) return 0;
+    else
+        return f(k)/10;
+}
+
+int main() {
+    scanf("%lld", &i);
+    printf("%lld\n",f(i,1));
+}
+
+
+
+
+// 재귀 - n까지의 합
+/*
+#include <stdio.h>
+
+int n;
+
+int f(int k)
+{
+    
+    if(k == 1) return 1;
+    else
+        return f(k-1)+k;
+}
+
+int main()
+{
+    scanf("%d", &n);
+    printf("%d\n",f(n));
+}*/
+
+// 수열 속 보물 찾기 - 큰버전
+/*
 #include <cstdio>
  int n, k, i, j, tmp;
  int sum=0;
@@ -31,7 +70,7 @@
      }
  
      printf("%d", cnt);
-}
+}*/
 
 // 수열 속 보물 찾기 - 작은 버전
 
